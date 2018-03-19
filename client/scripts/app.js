@@ -6,7 +6,7 @@ var Movie = Backbone.Model.extend({
 
   toggleLike: function() {
     // your code here
-    if(this.get('like') === true) {
+    if (this.get('like') === true) {
       this.set('like', false);
     } else {
       this.set('like', true);
@@ -66,7 +66,7 @@ var MovieView = Backbone.View.extend({
                         </div>'),
 
   initialize: function() {
-    this.model.on('change', this.render,this);
+    this.model.on('change', this.render, this);
   },
 
   events: {
@@ -89,7 +89,7 @@ var MoviesView = Backbone.View.extend({
 
   initialize: function() {
     // your code here
-    this.collection.on('sort', this.render,this);
+    this.collection.on('sort', this.render, this);
   },
 
   render: function() {
